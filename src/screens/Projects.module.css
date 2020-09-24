@@ -1,0 +1,82 @@
+.container {
+}
+
+section {
+	display: flex;
+	border-top: 2px solid white;
+	align-items: center;
+}
+
+.company_section {
+	display: flex;
+	flex-basis: 50%;
+	flex-direction: column;
+	padding: 2rem;
+	/* background-color: brown; */
+	/* flex-grow: 0.7; */
+	/* background-color: blue; */
+}
+
+.company_title {
+	display: flex;
+	align-items: flex-end;
+	padding-top: 0;
+	/* flex-direction: column; */
+}
+
+.description_section {
+	display: flex;
+	flex-basis: 50%;
+	/* background-color: brown; */
+	flex-direction: column;
+	padding: 1rem;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+}
+
+.company_img {
+	width: 200px;
+}
+
+.london {
+	margin-left: 10px;
+	padding-bottom: 4px;
+}
+
+.description_section p {
+	width: 70%;
+}
+
+.imageButton {
+	color: white;
+	background-color: #1762a7;
+	padding: .75rem 1.5rem;
+	border-radius: .5rem;
+	text-decoration: none;
+	font-family: inherit;
+	border: none;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+	section {
+		flex-direction: column;
+	}
+
+	.company_section {
+		padding: 0;
+		text-align: center;
+	}
+
+	.company_title {
+		display: flex;
+		justify-content: center;
+		padding-top: 2rem;
+		/* flex-direction: column; */
+	}
+
+	.description_section p {
+		width: 90%;
+	}
+}

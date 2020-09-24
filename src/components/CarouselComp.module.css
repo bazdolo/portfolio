@@ -1,0 +1,35 @@
+.backdrop {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.carouselContainer {
+	position: fixed;
+	/* width: 50vw;
+	height: 600px; */
+	top: 50%;
+	left: 50%;
+	z-index: 100;
+	transform: translate(-50%, -50%);
+}
+
+.carouselContainer img {
+	border-radius: 10px;
+}
+
+.search {
+	width: 200px;
+	height: 200px;
+}
+
+.contain {
+	max-width: 100%;
+}

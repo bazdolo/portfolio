@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, Fragment } from 'react';
+import Projects from './screens/Projects';
+import avatarSmall from './images/myAvatar-small.png';
+
+import MainAvatar from './components/MainAvatar';
+import Typer from './components/Typer';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [ border, setBorder ] = useState(null);
+	const [ screen, setScreen ] = useState('Projects');
+
+	const renderScreen = () => {
+		if (screen === 'Projects') {
+			return <Projects />;
+		} else {
+			return (
+				<Fragment>
+					<MainAvatar />
+					<Typer setBorder={setBorder} />
+				</Fragment>
+			);
+		}
+	};
+
+	return (
+		<div class="container full-height-grow">
+			<header class="main-header">
+				<a class="brand-logo">
+					<img onClick={() => setScreen(null)} class="avatar-header" src={avatarSmall} />
+					<div class="brand-logo-name">Baz Dolo</div>
+				</a>
+				<nav class="main-nav">
+					<ul>
+						<li class={border === 'project-nav' ? border : null}>
+							<button
+								onClick={() => {
+									setScreen('Projects');
+								}}
+							>
+								Projects
+							</button>
+						</li>
+						<li class={border === 'tech-nav' ? border : null}>
+							<button>Technologies</button>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			{renderScreen()}
+			<div class="circle-1" />
+			<div class="circle-2" />
+			<div class="circle-3" />
+			<div class="circle-4" />
+		</div>
+	);
 }
 
 export default App;
