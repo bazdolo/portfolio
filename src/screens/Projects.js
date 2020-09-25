@@ -84,7 +84,7 @@ export default function Projects() {
 						This portfolio site was created from scratch with React and CSS if you would like to see the
 						code for the project you can check it out below
 					</p>
-					<a target="_blank" rel="noopener noreferrer" href="https://github.com/bazdolo?tab=repositories">
+					<a target="_blank" rel="noopener noreferrer" href="https://github.com/bazdolo/portfolio">
 						<button className={classes.imageButton}>View Github</button>
 					</a>
 				</div>

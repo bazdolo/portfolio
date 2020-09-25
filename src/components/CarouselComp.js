@@ -5,9 +5,9 @@ import classes from './CarouselComp.module.css';
 import bestSellers from '../images/bestSellers.png';
 import foodHome from '../images/foodHome.png';
 import gkAppstore from '../images/GK_Appstore.png';
+import gkipad from '../images/gkipad.png';
 import flappy from '../images/flappy.png';
 import steering from '../images/steering.png';
-import gkSearch from '../images/GKSearch.jpg';
 
 export default function CarouselComp({ setCarousel, isCarousel }) {
 	// const [ carousel, setCarousel ] = useState(null);
@@ -23,6 +23,10 @@ export default function CarouselComp({ setCarousel, isCarousel }) {
 				<Carousel>
 					<div>
 						<img src={gkAppstore} />
+						{/* <p className="legend">Legend 1</p> */}
+					</div>
+					<div className={classes.contain}>
+						<img src={gkipad} />
 						{/* <p className="legend">Legend 1</p> */}
 					</div>
 				</Carousel>

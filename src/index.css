@@ -16,4 +16,21 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+.slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	background-color: transparent;
+	/* height: 100%; */
+}
+
+.slide img {
+	/* display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: black; */
+	/* height: 100%; */
+}
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');

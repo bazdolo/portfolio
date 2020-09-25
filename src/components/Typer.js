@@ -4,8 +4,8 @@ import classes from './Typer.module.css';
 export default function Typer({ setBorder }) {
 	let speechArray = [
 		'Hi there, my name is Baz and I am a software developer, This is my portfolio                 ',
-		'You can look at the the various commercial projects I have worked on by clicking on the projects link above               ',
-		'Alternatively you can view which technologies I have used by selecting the Technologies link                       '
+		'You can look at the the various commercial projects I have worked on by selecting on the projects button above               ',
+		'Alternatively you can view a summary of my skills by selecting the profile tab                       '
 	];
 	let outer = 0;
 	let myTimeout;

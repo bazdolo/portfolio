@@ -1,0 +1,41 @@
+.profile_container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/* justify-content: flex-start; */
+	padding-top: 1rem;
+}
+
+.details_text div {
+	padding-top: 20px;
+}
+
+.details_text {
+	padding-left: 2rem;
+}
+
+.summary_header {
+	text-align: center;
+}
+
+.summary_text {
+	text-align: center;
+	max-width: 800px;
+	/* background-color: red; */
+}
+
+.p_container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	/* background-color: red; */
+}
+
+.skillLogo {
+	width: 150px;
+}
+
+.jsLogo {
+	width: 50px;
+}

@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from 'react';
 import Projects from './screens/Projects';
+import Profile from './screens/Profile';
 import avatarSmall from './images/myAvatar-small.png';
 
 import MainAvatar from './components/MainAvatar';
@@ -8,11 +9,14 @@ import './App.css';
 
 function App() {
 	const [ border, setBorder ] = useState(null);
-	const [ screen, setScreen ] = useState('Projects');
+	const [ screen, setScreen ] = useState('Profile');
 
 	const renderScreen = () => {
 		if (screen === 'Projects') {
 			return <Projects />;
+		}
+		if (screen === 'Profile') {
+			return <Profile />;
 		} else {
 			return (
 				<Fragment>
@@ -42,7 +46,13 @@ function App() {
 							</button>
 						</li>
 						<li class={border === 'tech-nav' ? border : null}>
-							<button>Technologies</button>
+							<button
+								onClick={() => {
+									setScreen('Profile');
+								}}
+							>
+								Profile
+							</button>
 						</li>
 					</ul>
 				</nav>

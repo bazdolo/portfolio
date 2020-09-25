@@ -30,6 +30,9 @@
 	height: 200px;
 }
 
-.contain {
-	max-width: 100%;
+.slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
 }
