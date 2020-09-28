@@ -162,6 +162,9 @@ body {
 	.brand-logo {
 		flex-direction: column;
 	}
+	.brand-logo-name {
+		margin-left: 0;
+	}
 	.main-header {
 		flex-direction: column;
 		margin-top: 20px;
