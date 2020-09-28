@@ -3,9 +3,10 @@ import classes from './Typer.module.css';
 
 export default function Typer({ setBorder }) {
 	let speechArray = [
-		'Hi there, my name is Baz and I am a software developer, This is my portfolio                 ',
-		'You can look at the the various commercial projects I have worked on by selecting on the projects button above               ',
-		'Alternatively you can view a summary of my skills by selecting the profile tab                       '
+		'Hi there, my name is Baz and I am a software developer. This is my portfolio.                 ',
+		'You can look at the the various commercial projects I have worked on by selecting the projects button above.               ',
+		'Alternatively you can view a summary of my skills by selecting the profile tab.                       ',
+		'This site was created entirely with React JS'
 	];
 	let outer = 0;
 	let myTimeout;
@@ -30,7 +31,7 @@ export default function Typer({ setBorder }) {
 			if (outer === 1) setBorder('project-nav');
 			if (outer === 2) setBorder('tech-nav');
 			typer(0);
-			if (outer !== 3) {
+			if (outer !== 4) {
 				setText('');
 			}
 		}

@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import avatarSmall from '../images/myAvatar-small.png';
+import avatarSmall from '../images/myAvatar-beard.png';
 import reactLogo from '../images/reactLogo.png';
 import jsLogo from '../images/jsLogo.png';
 import nodejsLogo from '../images/nodejsLogo.png';
+import mysqlLogo from '../images/mysqlLogo.png';
+import htmlLogo from '../images/htmlLogo.png';
+import cssLogo from '../images/cssLogo.png';
 import classes from './Profile.module.css';
 
 export default function Profile() {
 	const [ details, setDetails ] = useState({ name: '', job: '', status: '', head: '', summary: '', skills: '' });
+	const [ isSkills, setSkills ] = useState(false);
 
 	let speechArray = [
-		'Name: Baz Dolo',
+		'Name: Baz',
 		'Occupation: Software Developer',
 		'Status: Looking for work',
 		'Summary',
@@ -25,6 +29,7 @@ export default function Profile() {
 
 	const typerMultiLine = (index) => {
 		if (outer > speechArray.length - 1) {
+			setSkills(true);
 			return;
 		}
 
@@ -51,10 +56,31 @@ export default function Profile() {
 		return () => window.clearTimeout(myTimeout);
 	}, []);
 
+	const renderSkills = () => {
+		if (isSkills) {
+			return (
+				<React.Fragment>
+					<h2 className={classes.summary_header}>Core Skills</h2>
+					<div className={classes.logoContainer}>
+						<img className={classes.skillLogo} src={reactLogo} />
+						<img className={classes.mysqlLogo} src={mysqlLogo} />
+						<img className={classes.skillLogo} src={nodejsLogo} />
+					</div>
+					<div className={classes.logoContainer2}>
+						<img className={classes.jsLogo} src={jsLogo} />
+
+						<img className={classes.jsLogo} src={htmlLogo} />
+						<img className={classes.jsLogo} src={cssLogo} />
+					</div>
+				</React.Fragment>
+			);
+		}
+	};
+
 	return (
 		<div>
 			<div className={classes.profile_container}>
-				<img src={avatarSmall} />
+				<img className={classes.avatar} src={avatarSmall} />
 				<div className={classes.details_text}>
 					<div>{details.name}</div>
 					<div>{details.job}</div>
@@ -65,10 +91,7 @@ export default function Profile() {
 			<div className={classes.p_container}>
 				<p className={classes.summary_text}>{details.summary}</p>
 			</div>
-			<h2 className={classes.summary_header}>{details.skills}</h2>
-			<img className={classes.skillLogo} src={reactLogo} />
-			<img className={classes.jsLogo} src={jsLogo} />
-			<img className={classes.skillLogo} src={nodejsLogo} />
+			{renderSkills()}
 		</div>
 	);
 }

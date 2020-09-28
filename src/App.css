@@ -46,7 +46,7 @@ body {
 	padding: 0rem 1rem;
 	cursor: pointer;
 	background-color: transparent;
-	border: 2px, solid, white;
+	/* border: 2px solid white; */
 	font-family: inherit;
 	font-size: 1.25rem;
 	border-radius: 5rem;
@@ -55,12 +55,12 @@ body {
 	box-shadow: none;
 }
 
-.main-nav button:active {
-	color: red;
-}
-
 .main-nav button:hover {
 	color: grey;
+}
+
+.main-nav-active {
+	border-color: bisque !important;
 }
 
 .project-nav {

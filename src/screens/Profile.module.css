@@ -6,21 +6,30 @@
 	padding-top: 1rem;
 }
 
+.avatar {
+	width: 200px;
+}
+
 .details_text div {
 	padding-top: 20px;
+	font-family: Special Elite;
 }
 
 .details_text {
 	padding-left: 2rem;
+	font-size: 1.2rem;
 }
 
 .summary_header {
 	text-align: center;
+	font-family: Special Elite;
 }
 
 .summary_text {
 	text-align: center;
 	max-width: 800px;
+	font-family: Special Elite;
+	line-height: 28px;
 	/* background-color: red; */
 }
 
@@ -32,10 +41,60 @@
 	/* background-color: red; */
 }
 
+.logoContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	/* background-color: brown; */
+}
+
+.logoContainer2 {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 2rem 0;
+	/* background-color: brown; */
+}
+
 .skillLogo {
 	width: 150px;
 }
 
 .jsLogo {
 	width: 50px;
+}
+
+.mysqlLogo {
+	width: 120px;
+	padding-bottom: 38px;
+	/* flex-basis: 100%; */
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+	.avatar {
+		width: 110px;
+	}
+
+	.skillLogo {
+		width: 75px;
+	}
+
+	.jsLogo {
+		width: 25px;
+	}
+
+	.mysqlLogo {
+		width: 60px;
+		padding-bottom: 19px;
+		/* flex-basis: 100%; */
+	}
+	.profile_container {
+		justify-content: flex-start;
+	}
+	.details_text {
+		font-size: 0.90rem;
+		padding-bottom: 10px;
+	}
 }

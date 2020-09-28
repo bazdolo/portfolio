@@ -10,6 +10,10 @@
 .avatar_image {
 	border-radius: 50%;
 	width: 200px;
+	border-width: 2px;
+	border-style: outset;
+	border-color: bisque;
+	border-image: initial;
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {

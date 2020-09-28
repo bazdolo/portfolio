@@ -1,15 +1,16 @@
 import React, { useState, Fragment } from 'react';
 import Projects from './screens/Projects';
 import Profile from './screens/Profile';
-import avatarSmall from './images/myAvatar-small.png';
+import avatarSmall from './images/myAvatar-beard.png';
 
 import MainAvatar from './components/MainAvatar';
 import Typer from './components/Typer';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
 	const [ border, setBorder ] = useState(null);
-	const [ screen, setScreen ] = useState('Profile');
+	const [ screen, setScreen ] = useState(null);
 
 	const renderScreen = () => {
 		if (screen === 'Projects') {
@@ -32,13 +33,15 @@ function App() {
 			<header class="main-header">
 				<a class="brand-logo">
 					<img onClick={() => setScreen(null)} class="avatar-header" src={avatarSmall} />
-					<div class="brand-logo-name">Baz Dolo</div>
+					<div class="brand-logo-name">Baz</div>
 				</a>
-				<nav class="main-nav">
+				<nav class={'main-nav'}>
 					<ul>
 						<li class={border === 'project-nav' ? border : null}>
 							<button
+								class={screen === 'Projects' ? 'main-nav-active' : null}
 								onClick={() => {
+									setBorder(null);
 									setScreen('Projects');
 								}}
 							>
@@ -47,7 +50,9 @@ function App() {
 						</li>
 						<li class={border === 'tech-nav' ? border : null}>
 							<button
+								class={screen === 'Profile' ? 'main-nav-active' : null}
 								onClick={() => {
+									setBorder(null);
 									setScreen('Profile');
 								}}
 							>
@@ -62,6 +67,7 @@ function App() {
 			<div class="circle-2" />
 			<div class="circle-3" />
 			<div class="circle-4" />
+			<Footer />
 		</div>
 	);
 }
