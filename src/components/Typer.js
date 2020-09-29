@@ -3,13 +3,15 @@ import classes from './Typer.module.css';
 
 export default function Typer({ setBorder }) {
 	let speechArray = [
-		'Hi there, my name is Baz and I am a software developer. This is my portfolio.                 ',
-		'You can look at the the various commercial projects I have worked on by selecting the projects button above.               ',
-		'Alternatively you can view a summary of my skills by selecting the profile tab.                       ',
-		'This site was created entirely with React JS'
+		'Hi there, my name is Baz and I am a software developer. This is my portfolio. ',
+		'You can look at the the various commercial projects I have worked on by selecting the projects button above. ',
+		'Alternatively you can view a summary of my skills by selecting the profile tab. ',
+		'This site was created entirely with React JS. '
 	];
 	let outer = 0;
 	let myTimeout;
+	let myTimeout2;
+	let speed = 50;
 
 	const [ text, setText ] = useState('');
 
@@ -23,13 +25,18 @@ export default function Typer({ setBorder }) {
 			myTimeout = setTimeout(function() {
 				setText((prev) => prev + textArray[index]);
 				index++;
-
+				if (index === textArray.length - 1) {
+					if (outer === 1) setBorder('project-nav');
+					if (outer === 2) setBorder('tech-nav');
+					speed = 2000;
+				} else {
+					speed = 50;
+				}
 				typer(index);
-			}, 40);
+			}, speed);
 		} else {
 			outer++;
-			if (outer === 1) setBorder('project-nav');
-			if (outer === 2) setBorder('tech-nav');
+
 			typer(0);
 			if (outer !== 4) {
 				setText('');

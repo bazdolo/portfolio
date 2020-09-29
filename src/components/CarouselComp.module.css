@@ -13,8 +13,8 @@
 
 .carouselContainer {
 	position: fixed;
-	/* width: 50vw;
-	height: 600px; */
+	width: 70%;
+	height: 70%;
 	top: 50%;
 	left: 50%;
 	z-index: 100;

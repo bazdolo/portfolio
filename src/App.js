@@ -37,9 +37,11 @@ function App() {
 				</a>
 				<nav class={'main-nav'}>
 					<ul>
-						<li class={border === 'project-nav' ? border : null}>
+						<li>
 							<button
-								class={screen === 'Projects' ? 'main-nav-active' : null}
+								class={
+									screen === 'Projects' ? 'main-nav-active' : border === 'project-nav' ? border : null
+								}
 								onClick={() => {
 									setBorder(null);
 									setScreen('Projects');
@@ -48,9 +50,9 @@ function App() {
 								Projects
 							</button>
 						</li>
-						<li class={border === 'tech-nav' ? border : null}>
+						<li>
 							<button
-								class={screen === 'Profile' ? 'main-nav-active' : null}
+								class={screen === 'Profile' ? 'main-nav-active' : border === 'tech-nav' ? border : null}
 								onClick={() => {
 									setBorder(null);
 									setScreen('Profile');
