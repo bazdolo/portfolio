@@ -2,6 +2,7 @@ import React, { useState, Fragment } from 'react';
 import Projects from './screens/Projects';
 import Profile from './screens/Profile';
 import avatarSmall from './images/myAvatar-beard.png';
+import greenArrow from './images/green_arrow.png';
 
 import MainAvatar from './components/MainAvatar';
 import Typer from './components/Typer';
@@ -47,9 +48,15 @@ function App() {
 									setScreen('Projects');
 								}}
 							>
-								Projects
+								<label>Projects</label>
 							</button>
+							{border === 'project-nav' && (
+								<div className="green_arrow_container">
+									<img className="green_arrow" src={greenArrow} />
+								</div>
+							)}
 						</li>
+
 						<li>
 							<button
 								class={screen === 'Profile' ? 'main-nav-active' : border === 'tech-nav' ? border : null}
@@ -58,8 +65,13 @@ function App() {
 									setScreen('Profile');
 								}}
 							>
-								Profile
+								<label>Profile</label>
 							</button>
+							{border === 'tech-nav' && (
+								<div className="green_arrow_container">
+									<img className="green_arrow" src={greenArrow} />
+								</div>
+							)}
 						</li>
 					</ul>
 				</nav>
@@ -69,6 +81,7 @@ function App() {
 			<div class="circle-2" />
 			<div class="circle-3" />
 			<div class="circle-4" />
+
 			<Footer />
 		</div>
 	);

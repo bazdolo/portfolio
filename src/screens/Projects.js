@@ -3,6 +3,8 @@ import CarouselComp from '../components/CarouselComp';
 import gokart_img from '../images/wordLogoWhite.png';
 import foodLogo from '../images/foodtohomelogo.jpg';
 import githubLogo from '../images/githubLogo.png';
+import appleSmall from '../images/apple-24.png';
+import androidSmall from '../images/android-6-24.png';
 
 import classes from './Projects.module.css';
 
@@ -25,7 +27,7 @@ export default function Projects() {
 						anywhere, any time with the same discounted prices the big chains pay.
 					</p>
 				</div>
-				<div class={classes.description_section}>
+				<div className={classes.description_section}>
 					<p>
 						The mobile application was built with React Native for Android and IOS. While working for Gokart
 						I was responsible for the entire lifecyle of the project.
@@ -34,17 +36,36 @@ export default function Projects() {
 						I also created many internal systems at the company making use of my skills with React, Node.js
 						and Mysql
 					</p>
-
-					<button onClick={() => setCarousel('gk')} className={classes.imageButton}>
-						View Images
-					</button>
+					<div className={classes.gk_button_container}>
+						<button onClick={() => setCarousel('gk')} className={classes.imageButton}>
+							View Images
+						</button>
+						<div className={classes.icons}>
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="https://apps.apple.com/gb/app/gokart/id790005662"
+							>
+								<img className={classes.appleSmall} src={appleSmall} />
+								{/* <label className={classes.appleLabel}>View on app store</label> */}
+							</a>
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="https://play.google.com/store/apps/details?id=com.getgokart&hl=en_US"
+							>
+								<img className={classes.appleSmall} src={androidSmall} />
+								{/* <label className={classes.appleLabel}>View on app store</label> */}
+							</a>
+						</div>
+					</div>
 				</div>
 			</section>
 			<section>
-				<div class={classes.company_section}>
+				<div className={classes.company_section}>
 					<div class={classes.company_title}>
 						<a target="_blank" rel="noopener noreferrer" href={'https://foodtoyourhome.com'}>
-							<img class={classes.company_img} src={foodLogo} />
+							<img className={classes.company_img} src={foodLogo} />
 						</a>
 						<div className={classes.london}>London</div>
 					</div>

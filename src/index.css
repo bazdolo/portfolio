@@ -39,5 +39,10 @@ code {
 	}
 }
 
+@font-face {
+	font-family: 'theboldfont';
+	src: local('theboldfont'), url(./fonts/theboldfont.ttf) format('truetype');
+}
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');

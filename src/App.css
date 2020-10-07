@@ -22,6 +22,7 @@ body {
 
 .brand-logo-name {
 	margin-left: 1rem;
+	font-family: theboldfont;
 }
 
 .avatar-header {
@@ -38,21 +39,32 @@ body {
 
 .main-nav ul li {
 	margin-left: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: center; */
 }
 
 .main-nav button {
 	color: inherit;
 	text-decoration: none;
-	padding: 0rem 1rem;
+	padding: 0.1rem 1rem;
+	padding-top: 0.3rem;
 	cursor: pointer;
 	background-color: transparent;
 	/* border: 2px solid white; */
-	font-family: inherit;
-	font-size: 1.25rem;
+	font-family: theboldfont;
+	font-size: 1rem;
 	border-radius: 5rem;
 	outline: none;
+	text-align: center;
 	/* margin-left: 5px; */
+	/* position: relative; */
 	box-shadow: none;
+}
+
+.project_button {
+	position: relative;
 }
 
 .main-nav button:hover {
@@ -61,6 +73,11 @@ body {
 
 .main-nav-active {
 	border-color: bisque !important;
+}
+
+.main-nav label {
+	/* margin-top: 1rem; */
+	line-height: 10px;
 }
 
 .project-nav {
@@ -134,7 +151,7 @@ body {
 	z-index: -1;
 }
 
-.circle-4 {
+/* .circle-4 {
 	position: absolute;
 
 	width: 30vw;
@@ -142,8 +159,6 @@ body {
 	min-width: 200px;
 	min-height: 200px;
 	overflow: hidden;
-	/* background-color: red; */
-	/* background-color: rgba(73, 22, 50, 0.1); */
 	bottom: 0;
 	right: 0;
 	z-index: -1;
@@ -158,6 +173,17 @@ body {
 	border-radius: 50%;
 
 	background-color: rgba(73, 22, 50, 0.1);
+} */
+
+.green_arrow {
+	width: 50px;
+}
+
+.green_arrow_container {
+	position: absolute;
+	/* position: absolute; */
+	padding-top: 50px;
+	z-index: 10;
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {

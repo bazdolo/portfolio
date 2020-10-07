@@ -5,6 +5,8 @@ section {
 	display: flex;
 	border-top: 2px solid white;
 	align-items: center;
+	height: 40%;
+	padding: 1rem;
 }
 
 .company_section {
@@ -22,6 +24,25 @@ section {
 	align-items: flex-end;
 	padding-top: 0;
 	/* flex-direction: column; */
+}
+
+.gk_button_container {
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.icons {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.appleSmall {
+	width: 24px;
+	/* padding-bottom: 3px; */
 }
 
 .description_section {
@@ -42,6 +63,7 @@ section {
 .london {
 	margin-left: 10px;
 	padding-bottom: 4px;
+	font-family: theboldfont;
 }
 
 .description_section p {
@@ -54,9 +76,10 @@ section {
 	padding: .75rem 1.5rem;
 	border-radius: .5rem;
 	text-decoration: none;
-	font-family: inherit;
+	font-family: theboldfont;
 	border: none;
 	font-weight: bold;
+	padding-top: 1rem;
 }
 
 @media screen and (min-width: 0px) and (max-width: 900px) {
@@ -79,5 +102,14 @@ section {
 
 	.description_section p {
 		width: 90%;
+	}
+
+	.gk_button_container {
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+
+	.icons {
+		padding-top: 1rem;
 	}
 }
