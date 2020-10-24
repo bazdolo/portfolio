@@ -1,4 +1,6 @@
 import React from 'react';
+import { MdEmail } from 'react-icons/md';
+import { IconContext } from 'react-icons';
 import classes from './Footer.module.css';
 
 export default function Footer() {
@@ -8,7 +10,12 @@ export default function Footer() {
 				<nav className={classes.footer_nav}>
 					<ul>
 						<a className={classes.contact} href="mailto:barry.dolog@gmail.com">
-							<li>Contact</li>
+							<li>
+								<label>Contact</label>
+								<IconContext.Provider value={{ color: 'white', size: '1.5em' }}>
+									<MdEmail />
+								</IconContext.Provider>
+							</li>
 						</a>
 					</ul>
 				</nav>

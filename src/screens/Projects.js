@@ -26,20 +26,8 @@ export default function Projects() {
 						GoKart the ordering app for restaurants. Allowing food businesses to order their ingredients
 						anywhere, any time with the same discounted prices the big chains pay.
 					</p>
-				</div>
-				<div className={classes.description_section}>
-					<p>
-						The mobile application was built with React Native for Android and IOS. While working for Gokart
-						I was responsible for the entire lifecyle of the project.
-					</p>
-					<p>
-						I also created many internal systems at the company making use of my skills with React, Node.js
-						and Mysql
-					</p>
-					<div className={classes.gk_button_container}>
-						<button onClick={() => setCarousel('gk')} className={classes.imageButton}>
-							View Images
-						</button>
+					<div className={classes.icons_container}>
+						<label>View on the app store</label>
 						<div className={classes.icons}>
 							<a
 								target="_blank"
@@ -58,6 +46,22 @@ export default function Projects() {
 								{/* <label className={classes.appleLabel}>View on app store</label> */}
 							</a>
 						</div>
+					</div>
+				</div>
+
+				<div className={classes.description_section}>
+					<p>
+						The mobile application was built with React Native for Android and IOS. While working for Gokart
+						I was responsible for the entire lifecyle of the project.
+					</p>
+					<p>
+						I also created many internal systems at the company making use of my skills with React, Node.js
+						and Mysql
+					</p>
+					<div className={classes.gk_button_container}>
+						<button onClick={() => setCarousel('gk')} className={classes.imageButton}>
+							View Images
+						</button>
 					</div>
 				</div>
 			</section>

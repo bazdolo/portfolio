@@ -16,6 +16,14 @@
 .container ul li {
 	width: 100%;
 	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.container ul li label {
+	padding-top: 0.3em;
+	padding-right: 1em;
 }
 
 .contact {

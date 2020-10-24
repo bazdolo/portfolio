@@ -3,7 +3,7 @@
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	height: 50vh;
+	height: 45vh;
 	/* background-color: antiquewhite; */
 }
 
@@ -14,6 +14,12 @@
 	border-style: outset;
 	border-color: bisque;
 	border-image: initial;
+	transition-property: transform;
+	transition-duration: 2s;
+}
+
+.avatar_image:hover {
+	transform: rotateY(180deg);
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px) {

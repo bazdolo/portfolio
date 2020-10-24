@@ -2,7 +2,9 @@ import React, { useState, Fragment } from 'react';
 import Projects from './screens/Projects';
 import Profile from './screens/Profile';
 import avatarSmall from './images/myAvatar-beard.png';
-import greenArrow from './images/green_arrow.png';
+import { ImHome3 } from 'react-icons/im';
+import { IconContext } from 'react-icons';
+import { ImArrowUp } from 'react-icons/im';
 
 import MainAvatar from './components/MainAvatar';
 import Typer from './components/Typer';
@@ -33,8 +35,12 @@ function App() {
 		<div class="container full-height-grow">
 			<header class="main-header">
 				<a class="brand-logo">
-					<img onClick={() => setScreen(null)} class="avatar-header" src={avatarSmall} />
-					<div class="brand-logo-name">Baz</div>
+					<IconContext.Provider value={{ color: 'white', size: '1.5em' }}>
+						<div>
+							<ImHome3 onClick={() => setScreen(null)} />
+						</div>
+					</IconContext.Provider>
+					<div class="brand-logo-name">Barry</div>
 				</a>
 				<nav class={'main-nav'}>
 					<ul>
@@ -48,11 +54,15 @@ function App() {
 									setScreen('Projects');
 								}}
 							>
-								<label>Projects</label>
+								Projects
 							</button>
 							{border === 'project-nav' && (
-								<div className="green_arrow_container">
-									<img className="green_arrow" src={greenArrow} />
+								<div className="arrow_container">
+									<IconContext.Provider value={{ color: 'white', size: '2em' }}>
+										<div>
+											<ImArrowUp />
+										</div>
+									</IconContext.Provider>
 								</div>
 							)}
 						</li>
@@ -68,8 +78,12 @@ function App() {
 								<label>Profile</label>
 							</button>
 							{border === 'tech-nav' && (
-								<div className="green_arrow_container">
-									<img className="green_arrow" src={greenArrow} />
+								<div className="arrow_container">
+									<IconContext.Provider value={{ color: 'white', size: '2em' }}>
+										<div>
+											<ImArrowUp />
+										</div>
+									</IconContext.Provider>
 								</div>
 							)}
 						</li>
@@ -80,7 +94,7 @@ function App() {
 			<div class="circle-1" />
 			<div class="circle-2" />
 			<div class="circle-3" />
-			<div class="circle-4" />
+			{/* <div class="circle-4" /> */}
 
 			<Footer />
 		</div>

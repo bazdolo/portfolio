@@ -12,13 +12,13 @@
 }
 
 .carouselContainer {
-	position: fixed;
-	width: 70%;
-	height: 70%;
-	top: 50%;
-	left: 50%;
-	z-index: 100;
-	transform: translate(-50%, -50%);
+	/* height: 50%; */
+	width: 20%;
+}
+
+.carouselContainerFood {
+	height: 50%;
+	width: 60%;
 }
 
 .carouselContainer img {
@@ -35,4 +35,15 @@
 	align-items: center;
 	justify-content: center;
 	background-color: black;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+	.carouselContainerFood {
+		height: 50%;
+		width: 90%;
+	}
+	.carouselContainer {
+		/* height: 50%; */
+		width: 60%;
+	}
 }

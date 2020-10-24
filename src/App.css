@@ -27,7 +27,7 @@ body {
 
 .avatar-header {
 	border-radius: 50%;
-	width: 50px;
+	/* width: 50px; */
 }
 
 .main-nav ul {
@@ -58,6 +58,7 @@ body {
 	border-radius: 5rem;
 	outline: none;
 	text-align: center;
+	text-shadow: inherit;
 	/* margin-left: 5px; */
 	/* position: relative; */
 	box-shadow: none;
@@ -83,14 +84,14 @@ body {
 .project-nav {
 	border-style: solid;
 	border-width: 3px;
-	border-color: rgba(36, 223, 73, 0.865);
+	border-color: white;
 	border-radius: 7%;
 }
 
 .tech-nav {
 	border-style: solid;
 	border-width: 3px;
-	border-color: rgba(36, 223, 73, 0.865);
+	border-color: white;
 	border-radius: 7%;
 }
 
@@ -116,8 +117,8 @@ body {
 	position: absolute;
 	width: 25vw;
 	height: 25vw;
-	min-width: 300px;
-	min-height: 300px;
+	min-width: 200px;
+	min-height: 200px;
 	border-radius: 50%;
 	background-color: rgba(73, 22, 50, 0.1);
 	bottom: 15vw;
@@ -179,7 +180,7 @@ body {
 	width: 50px;
 }
 
-.green_arrow_container {
+.arrow_container {
 	position: absolute;
 	/* position: absolute; */
 	padding-top: 50px;
@@ -196,5 +197,12 @@ body {
 	.main-header {
 		flex-direction: column;
 		margin-top: 20px;
+		height: 100px;
+	}
+	.container {
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 0 20px;
+		overflow: hidden;
 	}
 }

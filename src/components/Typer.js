@@ -2,15 +2,14 @@ import React, { useState, useEffect } from 'react';
 import classes from './Typer.module.css';
 
 export default function Typer({ setBorder }) {
-	let speechArray = [
-		'Hi there, my name is Baz and I am a software developer. This is my portfolio. ',
+	const speechArray = [
+		'Hi there, my name is Barry and I am a software developer. This is my portfolio. ',
 		'You can look at the the various commercial projects I have worked on by selecting the projects button above. ',
 		'Alternatively you can view a summary of my skills by selecting the profile tab. ',
-		'This site was created entirely with React JS. '
+		'This site was created with React JS. '
 	];
 	let outer = 0;
 	let myTimeout;
-	let myTimeout2;
 	let speed = 50;
 
 	const [ text, setText ] = useState('');
@@ -49,5 +48,9 @@ export default function Typer({ setBorder }) {
 		return () => window.clearTimeout(myTimeout);
 	}, []);
 
-	return <div className={classes.typerText}>{text}</div>;
+	return (
+		<div className={classes.typerText}>
+			<div className={classes.speech_bubble}>{text}</div>
+		</div>
+	);
 }

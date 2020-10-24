@@ -12,15 +12,15 @@ export default function Profile() {
 	const [ details, setDetails ] = useState({ name: '', job: '', status: '', head: '', summary: '', skills: '' });
 	const [ isSkills, setSkills ] = useState(false);
 
-	let speechArray = [
-		'Name: Baz',
+	const speechArray = [
+		'Name: Barry',
 		'Occupation: Software Developer',
 		'Status: Looking for work',
 		'Summary',
 		'Experienced full-stack software engineer working with React-Native, React, Node.js and MySql, responsible for all front-end and various backend design and implementation. Having previously worked at a start-up I understand the need to meet deadlines and to develop my skills to fit the needs of the company in a fast-paced environment.',
 		'Skills'
 	];
-	let lineArray = [ 'job', 'status', 'head', 'summary' ];
+	const lineArray = [ 'job', 'status', 'head', 'summary' ];
 	let lineArrayIndex = 0;
 
 	let myTimeout;
@@ -60,7 +60,7 @@ export default function Profile() {
 		if (isSkills) {
 			return (
 				<React.Fragment>
-					<h2 className={classes.summary_header}>Core Skills</h2>
+					<h2 className={classes.core_header}>Core Skills</h2>
 					<div className={classes.logoContainer}>
 						<img className={classes.skillLogo} src={reactLogo} />
 						<img className={classes.mysqlLogo} src={mysqlLogo} />
@@ -82,7 +82,7 @@ export default function Profile() {
 			<div className={classes.profile_container}>
 				<img className={classes.avatar} src={avatarSmall} />
 				<div className={classes.details_text}>
-					<div>{details.name}</div>
+					<div className={classes.name}>{details.name}</div>
 					<div>{details.job}</div>
 					<div>{details.status}</div>
 				</div>
